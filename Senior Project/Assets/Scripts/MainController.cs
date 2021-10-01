@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    float speed = 5.0f;
+    //This rigidbody2d refers to the component in the inspector when clicking the main character. 
+    public float speed = 5.0f;
     float horizontal;
     float vertical;
 
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -22,11 +22,12 @@ public class MainController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         position.x = position.x + speed * horizontal * Time.deltaTime;
         position.y = position.y + speed * vertical * Time.deltaTime;
+        //rigidbody2d.MovePosition(position);
         transform.position = position;
     }
     
-    void FixedUpdate()
+    void FixedUpdate() 
     {
-    
+        
     }
 }
