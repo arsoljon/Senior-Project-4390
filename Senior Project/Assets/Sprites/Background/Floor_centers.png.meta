@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 63826709158e6bc4a8d632bd29d947ac
+guid: 4248147110d9b6741946f186aca5fdff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9035085995654730869
-    second: sandy-tileset_0
+      213: -6439351913790184110
+    second: Floor_centers_0
   - first:
-      213: -3766901189135113763
-    second: sandy-tileset_1
+      213: -2400397662954501956
+    second: Floor_centers_1
   - first:
-      213: 1323760364051768765
-    second: sandy-tileset_2
+      213: 3165416979562449333
+    second: Floor_centers_2
   - first:
-      213: -8625417707939735221
-    second: sandy-tileset_3
-  - first:
-      213: 6384898472019234357
-    second: sandy-tileset_4
-  - first:
-      213: -6518156922135355719
-    second: sandy-tileset_10
+      213: -332125718818677411
+    second: Floor_centers_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,127 +115,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sandy-tileset_0
+      name: Floor_centers_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 257
-        width: 55
-        height: 55
+        x: 9
+        y: 67
+        width: 48
+        height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8ba4e9282dec9280800000000000000
-      internalID: -9035085995654730869
+      spriteID: 255edc23d83d2a6a0800000000000000
+      internalID: -6439351913790184110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sandy-tileset_1
+      name: Floor_centers_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 260
-        width: 55
-        height: 55
+        x: 78
+        y: 62
+        width: 32
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd1ea9d835749bbc0800000000000000
-      internalID: -3766901189135113763
+      spriteID: cb84beb1b0310bed0800000000000000
+      internalID: -2400397662954501956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sandy-tileset_2
+      name: Floor_centers_2
       rect:
         serializedVersion: 2
-        x: 92
-        y: 255
-        width: 55
-        height: 55
+        x: 11
+        y: 11
+        width: 48
+        height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db52c0b9901fe5210800000000000000
-      internalID: 1323760364051768765
+      spriteID: 5b94fc8c8f1ddeb20800000000000000
+      internalID: 3165416979562449333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sandy-tileset_3
+      name: Floor_centers_3
       rect:
         serializedVersion: 2
-        x: 138
-        y: 257
-        width: 55
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4953e64b4c5c4880800000000000000
-      internalID: -8625417707939735221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sandy-tileset_4
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 258
-        width: 55
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53e04a7e457bb9850800000000000000
-      internalID: 6384898472019234357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sandy-tileset_10
-      rect:
-        serializedVersion: 2
-        x: 17
+        x: 78
         y: 9
-        width: 100
-        height: 70
+        width: 32
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9be5ed160dada85a0800000000000000
-      internalID: -6518156922135355719
+      spriteID: d5d9a0d1b6d046bf0800000000000000
+      internalID: -332125718818677411
       vertices: []
       indices: 
       edges: []
