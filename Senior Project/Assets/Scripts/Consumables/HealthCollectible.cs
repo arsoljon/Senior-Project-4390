@@ -27,7 +27,7 @@ public class HealthCollectible : MonoBehaviour
             if (controller != null)
             {
                 Debug.Log("Symbolic health increase!");
-                /*
+                
                 //Make these inside of the PlayerController script. 
                 if(controller.health  < controller.maxHealth)
                 {
@@ -35,7 +35,7 @@ public class HealthCollectible : MonoBehaviour
                     controller.ChangeHealth(1);
                     gone = true;
                 }
-                */
+                
             } 
         }
     }

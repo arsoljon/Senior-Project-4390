@@ -8,7 +8,6 @@ public class HealthControl : MonoBehaviour
     public float timeToggle = 2;
     public float currentTime = 0;
     public bool enabled;
-    HealthCollectible controller;
 
     void Start()
     {
@@ -25,6 +24,13 @@ public class HealthControl : MonoBehaviour
                 if(child.tag == "Food")
                 {
                     HealthCollectible controller = child.GetComponent<HealthCollectible>();
+                    if(controller.isGone){
+                        enabled = !enabled;
+                        child.gameObject.SetActive(enabled);
+                    }
+                }
+                else if(child.tag == "Poison"){
+                    Damage controller = child.GetComponent<Damage>();
                     if(controller.isGone){
                         enabled = !enabled;
                         child.gameObject.SetActive(enabled);
@@ -47,6 +53,14 @@ public class HealthControl : MonoBehaviour
                         child.gameObject.SetActive(enabled);
                         controller.ResetGone();
                         currentTime = 0;                    
+                    }
+                    else if(child.tag == "Poison")
+                    {
+                        Damage controller = child.GetComponent<Damage>();
+                        enabled = !enabled;
+                        child.gameObject.SetActive(enabled);
+                        controller.ResetGone();
+                        currentTime = 0;                           
                     }
                 }
             }
