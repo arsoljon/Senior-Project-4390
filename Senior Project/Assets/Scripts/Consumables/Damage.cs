@@ -15,4 +15,19 @@ public class Damage : MonoBehaviour
     {
         
     }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        PlayerController controller = other.GetComponent<PlayerController>();
+
+        if(controller != null)
+        {
+            Debug.Log("Symbolic health decrease!");
+            /*
+            if(controller.health > 0 && controller.health < controller.maxHealth)
+            {
+                controller.ChangeHealth(-1);
+            }
+            */
+        }
+    }
 }

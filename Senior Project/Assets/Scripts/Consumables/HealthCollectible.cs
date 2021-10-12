@@ -15,4 +15,22 @@ public class HealthCollectible : MonoBehaviour
     {
         
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        PlayerController controller = other.GetComponent<PlayerController>();
+
+        if (controller != null)
+        {
+            Debug.Log("Symbolic health increase!");
+            /*
+            //Make these inside of the PlayerController script. 
+            if(controller.health  < controller.maxHealth)
+            {
+                //Make this too. ChangeHealth function. 
+                controller.ChangeHealth(1);
+            }
+            */
+        } 
+    }
 }
