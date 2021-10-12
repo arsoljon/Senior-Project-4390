@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class HealthCollectible : MonoBehaviour
 {
+    //These variables will keep track if the item should be shown. 
+    public bool isGone {get{return gone;}}
+    bool gone;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gone = false;
     }
 
     // Update is called once per frame
@@ -18,19 +21,27 @@ public class HealthCollectible : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerController controller = other.GetComponent<PlayerController>();
-
-        if (controller != null)
+        if(gone == false)
         {
-            Debug.Log("Symbolic health increase!");
-            /*
-            //Make these inside of the PlayerController script. 
-            if(controller.health  < controller.maxHealth)
+            PlayerController controller = other.GetComponent<PlayerController>();
+            if (controller != null)
             {
-                //Make this too. ChangeHealth function. 
-                controller.ChangeHealth(1);
-            }
-            */
-        } 
+                Debug.Log("Symbolic health increase!");
+                /*
+                //Make these inside of the PlayerController script. 
+                if(controller.health  < controller.maxHealth)
+                {
+                    //Make this too. ChangeHealth function. 
+                    controller.ChangeHealth(1);
+                    gone = true;
+                }
+                */
+            } 
+        }
+    }
+
+    public void ResetGone()
+    {
+        gone = false;
     }
 }
