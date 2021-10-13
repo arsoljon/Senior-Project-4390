@@ -20,9 +20,13 @@ public class PlayerController : MonoBehaviour {
     private bool isGrounded = true;
     private bool isJumping = false;
 
+    public int maxHealth = 5;
+    public int health { get { return currentHealth; }}
+    int currentHealth;
 
     private void Awake() {
         animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     private void Update() {
@@ -82,5 +86,11 @@ public class PlayerController : MonoBehaviour {
         newScale.x *= -1;
 
         transform.localScale = newScale;
+    }
+
+    public void ChangeHealth(int amount)
+    {   
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 }
