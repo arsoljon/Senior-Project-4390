@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
+    //These variables will keep track if the item should be shown. 
+    public bool isGone {get{return gone;}}
+    bool gone;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gone = false;
     }
 
     // Update is called once per frame
@@ -17,17 +20,24 @@ public class Damage : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        PlayerController controller = other.GetComponent<PlayerController>();
-
-        if(controller != null)
+        if(gone == false)
         {
-            Debug.Log("Symbolic health decrease!");
-            /*
-            if(controller.health > 0 && controller.health < controller.maxHealth)
+            PlayerController controller = other.GetComponent<PlayerController>();
+            if(controller != null)
             {
-                controller.ChangeHealth(-1);
+                Debug.Log("Symbolic health decrease!");
+                if(controller.health > 0 && controller.health <= controller.maxHealth)
+                {
+                    controller.ChangeHealth(-1);
+                    gone = true;
+                }     
             }
-            */
         }
+        
+    }
+
+    public void ResetGone()
+    {
+        gone = false;
     }
 }
