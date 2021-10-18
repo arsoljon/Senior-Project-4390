@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class FishController : MonoBehaviour
 {
-    float speed = 3.0f;
+    //Different fish should have differnt speed and different frequencies. 
+    //Frequency represents how quick it floats down/up
+    //Amplitude represents how high/low
+    float speed;
     float distanceAway = 20.0f;
-    float _amplitude = 0.5f;
-    float _frequency = 2.0f;
+    float _amplitude;
+    float _frequency;
+    float _origin;
     public PlayerController player;
     Rigidbody controller;
     // Start is called before the first frame update
     void Start()
     {
+        speed = Random.Range(1.0f, 5.0f);
+        _frequency = Random.Range(0.8f, 2.0f);
+        _amplitude = Random.Range(0.3f, 0.7f);
         Vector2 position = transform.position;
         position.x = player.transform.position.x - distanceAway;
         position.y = Random.Range(-1f, 7f);
@@ -32,6 +39,7 @@ public class FishController : MonoBehaviour
     {
         Vector2 position = transform.position;
         position.x = position.x + speed * Time.deltaTime;
+        //Make the sin wave inconsistently go up and down. 
         position.y = Mathf.Sin(Time.time * _frequency) * _amplitude;
         transform.position = position;
     }
