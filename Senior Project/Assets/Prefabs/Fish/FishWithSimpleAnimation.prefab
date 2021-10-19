@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2296591102402796610}
   - component: {fileID: -999005904204978595}
   m_Layer: 0
-  m_Name: Trout
+  m_Name: FishWithSimpleAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
