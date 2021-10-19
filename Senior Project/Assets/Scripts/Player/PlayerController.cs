@@ -21,20 +21,20 @@ public class PlayerController : MonoBehaviour {
     private bool isJumping = false;
 
     public int maxHealth = 5;
-    public int health { get { return currentHealth; }}
+    public int health { get => currentHealth; }
     int currentHealth;
 
     private void Awake() {
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
     }
-
+    
     private void Update() {
         float horizontal = Input.GetAxisRaw("Horizontal");
         directionX = horizontal * moveSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
-
+ 
         if (Input.GetButtonDown("Jump")) {
             isJumping = true;
         }
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void GroundedCheck() {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, .06f, LayerMask.GetMask("Ground"));
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, .03f, LayerMask.GetMask("Ground"));
 
         foreach (Collider2D collider in colliders) {
             if (collider.gameObject != gameObject) isGrounded = true;
