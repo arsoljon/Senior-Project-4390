@@ -24,9 +24,17 @@ public class PlayerController : MonoBehaviour {
     public int health { get { return currentHealth; }}
     int currentHealth;
 
+    float waterLevel = -2f;
+    bool isUnderWater; 
+    float timeUnderWater = 0f;
+    float maxTimeUnderWater = 3f;
+    float damageTimer = 1f;
+    float resetDamageTimer = 1f;
+
     private void Awake() {
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+        isUnderWater = false;
     }
 
     private void Update() {
@@ -38,6 +46,8 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("Jump")) {
             isJumping = true;
         }
+
+        UnderWaterStatus();
     }
 
     private void FixedUpdate() {
@@ -92,5 +102,30 @@ public class PlayerController : MonoBehaviour {
     {   
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+    }
+
+    public void UnderWaterStatus()
+    {
+        //check under water status
+        if(transform.position.y < waterLevel){
+            timeUnderWater = timeUnderWater + Time.deltaTime;
+            isUnderWater = true;
+        }
+        else{
+            if(timeUnderWater > 0f){
+                timeUnderWater = timeUnderWater - Time.deltaTime;
+            }
+            damageTimer = resetDamageTimer;
+            isUnderWater = false;
+        }
+
+        if(isUnderWater && timeUnderWater > maxTimeUnderWater){
+            if(damageTimer < 0f)
+            {
+                ChangeHealth(-1);
+                damageTimer = resetDamageTimer;
+            }
+            damageTimer = damageTimer - Time.deltaTime;
+        }
     }
 }
