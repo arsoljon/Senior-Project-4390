@@ -26,8 +26,8 @@ public class PlayerController : MonoBehaviour {
 
     float waterLevel = -2f;
     bool isUnderWater; 
-    float timeUnderWater = 0f;
     float maxTimeUnderWater = 3f;
+    float remainingBreath; 
     float damageTimer = 1f;
     float resetDamageTimer = 1f;
 
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour {
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
         isUnderWater = false;
+        remainingBreath = maxTimeUnderWater;
     }
 
     private void Update() {
@@ -108,18 +109,20 @@ public class PlayerController : MonoBehaviour {
     {
         //check under water status
         if(transform.position.y < waterLevel){
-            timeUnderWater = timeUnderWater + Time.deltaTime;
+            if(remainingBreath > 0f){
+                remainingBreath = remainingBreath - Time.deltaTime;
+            }
             isUnderWater = true;
         }
         else{
-            if(timeUnderWater > 0f){
-                timeUnderWater = timeUnderWater - Time.deltaTime;
+            if(remainingBreath < maxTimeUnderWater){
+                remainingBreath = remainingBreath + Time.deltaTime;
             }
             damageTimer = resetDamageTimer;
             isUnderWater = false;
         }
-
-        if(isUnderWater && timeUnderWater > maxTimeUnderWater){
+        //Only do damage after a given amount of time. 
+        if(isUnderWater && remainingBreath < 0f){
             if(damageTimer < 0f)
             {
                 ChangeHealth(-1);
@@ -127,5 +130,6 @@ public class PlayerController : MonoBehaviour {
             }
             damageTimer = damageTimer - Time.deltaTime;
         }
+        UIAirBar.instance.SetValue(remainingBreath / maxTimeUnderWater);
     }
 }
