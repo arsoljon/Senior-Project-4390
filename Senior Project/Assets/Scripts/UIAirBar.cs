@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIAirBar : MonoBehaviour
 {
     //Use this in case we create a method to increase air. 
     public static UIAirBar instance {get; private set;}
 
-    public Image mask;
+    [SerializeField] Image mask;
     float originalSize;
 
     void Awake()
