@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 0}
-  playerPrefab: {fileID: 0}
+  playerPrefab: {fileID: 1584872707083922693, guid: 17a769e1a0c974d4d8507181262fd9c3, type: 3}
   cam: {fileID: 0}

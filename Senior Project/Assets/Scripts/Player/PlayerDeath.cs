@@ -17,11 +17,14 @@ public class PlayerDeath : MonoBehaviour
     void Update()
     {
         if(gameObject.GetComponent<PlayerController>().health <= 0){
+            gameObject.layer = 20;
             deathTimer += Time.deltaTime;
             gameObject.GetComponent<PlayerController>().isDead = true;
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,0f,0f, 0.7f);
+            //gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
             gameObject.GetComponent<Animator>().Play("Player_Death");
-            gameObject.AddForce(Vector3.Down * 3);
+
             if(deathTimer > maxDeathTimer)
             {
                 Destroy(gameObject);
