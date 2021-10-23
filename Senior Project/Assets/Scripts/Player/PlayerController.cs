@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
     public int maxHealth = 5;
     public int health { get { return currentHealth; }}
     int currentHealth;
+    public bool isDead = false;
 
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -30,29 +31,35 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update() {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        directionX = horizontal * moveSpeed;
+        if(isDead == false)
+        {
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            directionX = horizontal * moveSpeed;
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+            animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-        if (Input.GetButtonDown("Jump")) {
-            isJumping = true;
+            if (Input.GetButtonDown("Jump")) {
+                isJumping = true;
+            }
         }
     }
 
     private void FixedUpdate() {
-        Move();
+        if(isDead == false)
+        {
+            Move();
 
-        if (directionX > 0 && !isFacingRight) {
-            FlipSprite();
-        } else if (directionX < 0 && isFacingRight) {
-            FlipSprite();
-        }
+            if (directionX > 0 && !isFacingRight) {
+                FlipSprite();
+            } else if (directionX < 0 && isFacingRight) {
+                FlipSprite();
+            }
 
-        GroundedCheck();
+            GroundedCheck();
 
-        if (isJumping && isGrounded) {
-            Jump();
+            if (isJumping && isGrounded) {
+                Jump();
+            }
         }
     }
 
