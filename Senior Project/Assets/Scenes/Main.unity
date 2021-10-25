@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+
 --- !u!1 &26340316
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +206,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
 --- !u!1 &73494955
 GameObject:
   m_ObjectHideFlags: 3
@@ -295,21 +297,25 @@ MonoBehaviour:
 --- !u!1 &119817841
 GameObject:
   m_ObjectHideFlags: 0
+
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+
   - component: {fileID: 119817844}
   - component: {fileID: 119817843}
   - component: {fileID: 119817842}
   m_Layer: 3
   m_Name: Island01
+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
 --- !u!60 &119817842
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -630,11 +636,13 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &119817844
+
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 119817841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -17.3, y: 0, z: 0}
@@ -643,6 +651,7 @@ Transform:
   m_Father: {fileID: 1375195394}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
 --- !u!1 &665764090
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +875,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1584872707083922746, guid: 17a769e1a0c974d4d8507181262fd9c3, type: 3}
   m_PrefabInstance: {fileID: 1584872706327417305}
   m_PrefabAsset: {fileID: 0}
+
 --- !u!1 &1051220404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,6 +1592,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
 --- !u!1001 &1584872706327417305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1589,6 +1600,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+
     - target: {fileID: 1584872706746610239, guid: 17a769e1a0c974d4d8507181262fd9c3, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.237
@@ -1600,6 +1612,7 @@ PrefabInstance:
     - target: {fileID: 1584872707083922692, guid: 17a769e1a0c974d4d8507181262fd9c3, type: 3}
       propertyPath: m_Offset.y
       value: 0.07119894
+
       objectReference: {fileID: 0}
     - target: {fileID: 1584872707083922693, guid: 17a769e1a0c974d4d8507181262fd9c3, type: 3}
       propertyPath: m_Name
