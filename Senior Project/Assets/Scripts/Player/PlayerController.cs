@@ -8,11 +8,11 @@ public class PlayerController : MonoBehaviour {
 
     [SerializeField] private float moveSpeed = 180f;
     [SerializeField] private float jumpForce = 200f;
-
+    
+    [SerializeField] private float moveSmoothing = 0.05f;
+    
     private Animator animator;
-
-    private float moveSmoothing = 0.05f;
-
+    
     private float directionX = 0f;
     private Vector2 currentVelocity = Vector2.zero;
 
