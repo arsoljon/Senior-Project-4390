@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
     int currentHealth;
     public bool isDead = false;
 
-    float waterLevel = -2f;
+    float waterLevel = -500f;
     bool isUnderWater; 
     float maxTimeUnderWater = 3f;
     float remainingBreath; 
@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour {
     {
         //check under water status
         if(transform.position.y < waterLevel){
-            if(remainingBreath > 0f){
+            if (remainingBreath > 0f){
                 remainingBreath = remainingBreath - Time.deltaTime;
             }
             isUnderWater = true;
