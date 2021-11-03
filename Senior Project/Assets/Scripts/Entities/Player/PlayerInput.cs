@@ -21,6 +21,7 @@ public class PlayerInput : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         movement.Move(horizontal, vertical);
+        movement.IsRunning = Input.GetKey(KeyCode.LeftShift);
 
         if (Input.GetButtonDown("Jump"))
         {

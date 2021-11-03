@@ -612,7 +612,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1989739303}
   - component: {fileID: 1989739304}
-  m_Layer: 0
+  - component: {fileID: 1989739305}
+  m_Layer: 4
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,8 +671,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1878619525
+  m_SortingLayer: 3
   m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -684,6 +685,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1989739305
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989739302}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &2112270273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -756,10 +783,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1516757836}
     m_Modifications:
-    - target: {fileID: 2340710190517158596, guid: 347e9d4798c856b4797f848bb84b45dd, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5380700810786460335, guid: 347e9d4798c856b4797f848bb84b45dd, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -802,10 +825,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5380700810786460335, guid: 347e9d4798c856b4797f848bb84b45dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7686049116138288647, guid: 347e9d4798c856b4797f848bb84b45dd, type: 3}
-      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8699191196145320055, guid: 347e9d4798c856b4797f848bb84b45dd, type: 3}
@@ -883,10 +902,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1516757836}
     m_Modifications:
-    - target: {fileID: 420534380022929274, guid: 55bca2a155bbdfc44a0564375d95228f, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1165915457431031597, guid: 55bca2a155bbdfc44a0564375d95228f, type: 3}
       propertyPath: m_Name
       value: Island_4
@@ -935,10 +950,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7110048913262580423, guid: 55bca2a155bbdfc44a0564375d95228f, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55bca2a155bbdfc44a0564375d95228f, type: 3}
 --- !u!4 &1930174746058455943 stripped
@@ -953,14 +964,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1516757836}
     m_Modifications:
-    - target: {fileID: 870186486094685764, guid: 267aa21153d2f754eb303df441c42d35, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6064700236289244720, guid: 267aa21153d2f754eb303df441c42d35, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8360874736218350484, guid: 267aa21153d2f754eb303df441c42d35, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1023,10 +1026,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1516757836}
     m_Modifications:
-    - target: {fileID: 295032640910577103, guid: 930b2b20ffe3cb447a905b2b9301012c, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 697685651211316157, guid: 930b2b20ffe3cb447a905b2b9301012c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1075,10 +1074,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Island_3
       objectReference: {fileID: 0}
-    - target: {fileID: 9163918746268231557, guid: 930b2b20ffe3cb447a905b2b9301012c, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 930b2b20ffe3cb447a905b2b9301012c, type: 3}
 --- !u!4 &3617863620446285639 stripped
@@ -1093,17 +1088,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1516757836}
     m_Modifications:
-    - target: {fileID: 4376153272128503396, guid: 43c2f2a79f0c54741b2315f221d5fe53, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6433988745581971492, guid: 43c2f2a79f0c54741b2315f221d5fe53, type: 3}
       propertyPath: m_Name
       value: Island _2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458864621325519711, guid: 43c2f2a79f0c54741b2315f221d5fe53, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9142706313939428599, guid: 43c2f2a79f0c54741b2315f221d5fe53, type: 3}
       propertyPath: m_RootOrder
@@ -1205,14 +1192,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 138613899216954565, guid: 1a259f0cca243b34b9c009d781746878, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6231937645808159496, guid: 1a259f0cca243b34b9c009d781746878, type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8538316835389670755, guid: 1a259f0cca243b34b9c009d781746878, type: 3}
-      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8632234840456724672, guid: 1a259f0cca243b34b9c009d781746878, type: 3}

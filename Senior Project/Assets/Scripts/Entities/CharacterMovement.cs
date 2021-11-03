@@ -2,79 +2,72 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CharacterMovement : MonoBehaviour
 {
-    [Header("Movement")]
+    [Header("Movement")] [SerializeField] private Vector2 moveDirection = new Vector2(0, 0);
     [SerializeField] private float walkSpeed = 3f;
     [SerializeField] private float runSpeed = 5f;
-    private float moveSpeed;
-
     [SerializeField] private float jumpForce = 5f;
-    [SerializeField] private Vector2 moveDirection = new Vector2(0, 0);
-    
-    [Header("Components")]
-    [SerializeField] private Transform groundCheck;
+
+    [Header("Components")] [SerializeField]
+    private Transform groundCheck;
+
     [SerializeField] private float groundCheckRadius = .2f;
     [SerializeField] private LayerMask whatIsGround;
 
-    private Rigidbody2D rb2d;
-    private Animator animator;
+    [SerializeField] private Transform submersedCheck;
+    [SerializeField] private float submersedCheckRadius = .2f;
+    [SerializeField] private LayerMask whatIsWater;
 
-    private bool isFacingRight = true;
-    private bool isGrounded = true;
-    
+    private Rigidbody2D rb2d;
+
+    private bool isGrounded;
+    private bool isUnderwater;
+    private float moveSpeed;
+
+    public Vector2 MoveDirection => moveDirection;
+
+    public bool IsRunning
+    {
+        set => moveSpeed = value ? runSpeed : walkSpeed;
+    }
+
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        
+
         moveSpeed = walkSpeed;
     }
-    
+
     private void FixedUpdate()
     {
-        float horizontal = moveDirection.x;
-        
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+        isUnderwater = Physics2D.OverlapCircle(submersedCheck.position, submersedCheckRadius, whatIsWater);
 
-        if (horizontal > 0 && !isFacingRight) {
-            ChangeSpriteFacing();
-        } else if (horizontal < 0 && isFacingRight) {
-            ChangeSpriteFacing();
+        if (isUnderwater)
+        {
+            rb2d.gravityScale = 0;
+            rb2d.velocity = new Vector2(rb2d.velocity.x, moveDirection.y * moveSpeed);
         }
-
-        CheckIfGrounded();
+        else
+        {
+            rb2d.gravityScale = 1.4f;
+        }
     }
 
     public void Move(float directionX, float directionY)
     {
         moveDirection.x = directionX;
-        
+        moveDirection.y = directionY;
+
         rb2d.velocity = new Vector2(directionX * moveSpeed, rb2d.velocity.y);
     }
 
-    public void Jump() 
+    public void Jump()
     {
         if (isGrounded)
-        {
             rb2d.velocity += Vector2.up * jumpForce;
-        }
-    }
-
-    private void ChangeSpriteFacing()
-    {
-        isFacingRight = !isFacingRight;
-        
-        var localTransform = transform;
-        
-        Vector3 newScale = localTransform.localScale;
-        newScale.x *= -1;
-
-        localTransform.localScale = newScale;
-    }
-    
-    private void CheckIfGrounded() {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
     }
 }

@@ -17,6 +17,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127e81e1cb3441cc97d26b1910daae7713b000/55/344af7f3/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AnimationHandler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="200DYuLEHyujw4aewcUMogFi9hZ" />
   <component name="ProjectViewState">
@@ -70,7 +71,7 @@
       <workItem from="1635471458059" duration="595000" />
       <workItem from="1635786346471" duration="9806000" />
       <workItem from="1635961036416" duration="252000" />
-      <workItem from="1635961346555" duration="1640000" />
+      <workItem from="1635961346555" duration="5138000" />
     </task>
     <servers />
   </component>
