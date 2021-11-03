@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EntityMovement : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float walkSpeed = 3f;
@@ -11,18 +11,17 @@ public abstract class EntityMovement : MonoBehaviour
     private float moveSpeed;
 
     [SerializeField] private float jumpForce = 5f;
-
+    [SerializeField] private Vector2 moveDirection = new Vector2(0, 0);
+    
     [Header("Components")]
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private float groundCheckRadius = .5f;
+    [SerializeField] private float groundCheckRadius = .2f;
     [SerializeField] private LayerMask whatIsGround;
+
     private Rigidbody2D rb2d;
     private Animator animator;
-    
-    protected float MoveDirectionX;
+
     private bool isFacingRight = true;
-    
-    protected bool IsJumping = false;
     private bool isGrounded = true;
     
     private void Awake()
@@ -35,34 +34,32 @@ public abstract class EntityMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        animator.SetFloat("Speed", Mathf.Abs(MoveDirectionX));
-           
-        Move();
+        float horizontal = moveDirection.x;
         
-        if (MoveDirectionX > 0 && !isFacingRight) {
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+
+        if (horizontal > 0 && !isFacingRight) {
             ChangeSpriteFacing();
-        } else if (MoveDirectionX < 0 && isFacingRight) {
+        } else if (horizontal < 0 && isFacingRight) {
             ChangeSpriteFacing();
         }
 
         CheckIfGrounded();
-        
-        if (IsJumping && isGrounded)
-        {
-            IsJumping = false;
-            
-            Jump();
-        }
     }
 
-    private void Move()
+    public void Move(float directionX, float directionY)
     {
-        rb2d.velocity = new Vector2(MoveDirectionX * moveSpeed, rb2d.velocity.y);
+        moveDirection.x = directionX;
+        
+        rb2d.velocity = new Vector2(directionX * moveSpeed, rb2d.velocity.y);
     }
-    
-    private void Jump() 
+
+    public void Jump() 
     {
-        rb2d.velocity += Vector2.up * jumpForce;
+        if (isGrounded)
+        {
+            rb2d.velocity += Vector2.up * jumpForce;
+        }
     }
 
     private void ChangeSpriteFacing()
@@ -71,19 +68,13 @@ public abstract class EntityMovement : MonoBehaviour
         
         var localTransform = transform;
         
-        Vector3 newScale = transform.localScale;
+        Vector3 newScale = localTransform.localScale;
         newScale.x *= -1;
 
         localTransform.localScale = newScale;
     }
     
     private void CheckIfGrounded() {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundCheckRadius, whatIsGround);
-
-        isGrounded = false;
-        foreach (Collider2D coll in colliders) {
-            if (coll.gameObject != gameObject) 
-                isGrounded = true;
-        }
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
     }
 }
