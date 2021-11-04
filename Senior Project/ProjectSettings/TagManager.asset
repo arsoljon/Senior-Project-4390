@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Poison
   - Fish
+  - SwimBoundary
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ public class FishController : MonoBehaviour
     public float amps {get{return _amplitude;}}
     public float freq {get{return _frequency;}}
     public float _speed;
+    public float _k; 
     float _amplitude;
     float _frequency;
     Rigidbody controller;
@@ -19,25 +20,40 @@ public class FishController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _frequency = Random.Range(0.8f, 2.0f);
-        _amplitude = Random.Range(0.3f, 0.7f);
+        _frequency = Random.Range(0.8f, 1.3f);
+        _amplitude = Random.Range(0.3f, 2.0f);
         _speed = Random.Range(1.0f, 5.0f);
+        _k = 0;
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("Move X", 0);
+        //animator.SetFloat("Move X", 0);
     }
 
     void FixedUpdate()
     {
-        animator.SetFloat("Move X", _speed);
+        if(_speed > 0){
+            animator.SetFloat("Move X", -1);
+        }
+        else{
+            animator.SetFloat("Move X", 1);
+        }
+        //animator.SetFloat("Move X", _speed);
         Vector2 position = transform.position;
         position.x = position.x + _speed * Time.deltaTime;
         //Make the sin wave inconsistently go up and down. 
-        position.y = Mathf.Sin(Time.time * _frequency) * _amplitude;
+        position.y = Mathf.Sin((Time.time) * _frequency) * _amplitude - _k;
         transform.position = position;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Fish")
+        {
+            _k += 1;
+            other.gameObject.GetComponent<FishController>()._k -= 1;
+        }
     }
 }
