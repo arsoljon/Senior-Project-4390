@@ -7,14 +7,12 @@ public class FishController : MonoBehaviour
     //Different fish should have differnt _speed and different frequencies. 
     //Frequency represents how quick it floats down/up
     //Amplitude represents how high/low
-    float distanceAway = 20.0f;
     public float speed {get{return _speed;}}
     public float amps {get{return _amplitude;}}
     public float freq {get{return _frequency;}}
     public float _speed;
     float _amplitude;
     float _frequency;
-    float _origin;
     Rigidbody controller;
 
     Animator animator;
