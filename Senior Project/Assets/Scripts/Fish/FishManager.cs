@@ -22,7 +22,7 @@ public class FishManager : MonoBehaviour
     }
  
 
-    void randomizeStartPosition(Transform child)
+    public void randomizeStartPosition(Transform child)
     {
         Vector3 rndPoint3D = RandomPointInBounds(fishSpawnArea.bounds, 1f);
         Vector2 rndPoint2D = new Vector2(rndPoint3D.x, rndPoint3D.y);
