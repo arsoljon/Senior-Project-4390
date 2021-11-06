@@ -6,7 +6,10 @@ using UnityEngine.EventSystems;
 
 public class CharacterMovement : MonoBehaviour
 {
-    [Header("Movement")] [SerializeField] private Vector2 moveDirection = new Vector2(0, 0);
+    public Vector2 MoveDirection => moveDirection;
+    
+    [Header("Movement")] 
+    [SerializeField] private Vector2 moveDirection = new Vector2(0, 0);
     [SerializeField] private float walkSpeed = 3f;
     [SerializeField] private float runSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
@@ -24,50 +27,73 @@ public class CharacterMovement : MonoBehaviour
     private Rigidbody2D rb2d;
 
     private bool isGrounded;
-    private bool isUnderwater;
+    private bool isTouchingWaterbody, isTouchingShoreline;
+    
     private float moveSpeed;
+    private float initialGravity;
 
-    public Vector2 MoveDirection => moveDirection;
-
+    private float xVelocity, yVelocity;
+    
     public bool IsRunning
     {
         set => moveSpeed = value ? runSpeed : walkSpeed;
     }
-
+    
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
 
         moveSpeed = walkSpeed;
+        initialGravity = rb2d.gravityScale;
     }
-
+    
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
-        isUnderwater = Physics2D.OverlapCircle(submersedCheck.position, submersedCheckRadius, whatIsWater);
 
-        if (isUnderwater)
+        xVelocity = moveDirection.x * moveSpeed;
+
+        if (isTouchingWaterbody)
         {
             rb2d.gravityScale = 0;
-            rb2d.velocity = new Vector2(rb2d.velocity.x, moveDirection.y * moveSpeed);
+            yVelocity = moveDirection.y * moveSpeed;
+
+            if (isTouchingShoreline)
+            {
+                yVelocity += 5;
+            }
         }
         else
         {
-            rb2d.gravityScale = 1.4f;
+            rb2d.gravityScale = initialGravity;
+            yVelocity = rb2d.velocity.y;
         }
+
+        rb2d.velocity = new Vector2(xVelocity, yVelocity);
     }
-
-    public void Move(float directionX, float directionY)
+    
+    public void Move(Vector2 direction)
     {
-        moveDirection.x = directionX;
-        moveDirection.y = directionY;
-
-        rb2d.velocity = new Vector2(directionX * moveSpeed, rb2d.velocity.y);
+        moveDirection = direction;
     }
 
     public void Jump()
     {
         if (isGrounded)
-            rb2d.velocity += Vector2.up * jumpForce;
+            rb2d.velocity = Vector2.up * jumpForce;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("WaterBody")) isTouchingWaterbody = true;
+        if (other.CompareTag("Shoreline")) isTouchingShoreline = true;
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("WaterBody")) isTouchingWaterbody = false;
+        if (other.CompareTag("Shoreline")) isTouchingShoreline = false;
+    }
+    
 }

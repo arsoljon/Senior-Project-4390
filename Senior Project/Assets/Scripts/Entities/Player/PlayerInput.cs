@@ -6,7 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterMovement))]
 public class PlayerInput : MonoBehaviour
 {
-
     [SerializeField] private CharacterMovement movement;
 
     private void Awake()
@@ -16,11 +15,9 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
+        Vector2 moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-
-        movement.Move(horizontal, vertical);
+        movement.Move(moveDirection);
         movement.IsRunning = Input.GetKey(KeyCode.LeftShift);
 
         if (Input.GetButtonDown("Jump"))
