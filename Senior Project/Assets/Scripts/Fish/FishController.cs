@@ -20,10 +20,19 @@ public class FishController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _frequency = Random.Range(0.8f, 1.3f);
-        _amplitude = Random.Range(0.3f, 2.0f);
-        _speed = Random.Range(1.0f, 5.0f);
         _k = 0;
+        _frequency = Random.Range(0.8f, 1.3f);
+        _amplitude = Random.Range(0.01f, 0.05f);
+        _speed = Random.Range(1.0f, 5.0f);
+        //alter the direction randomly 
+        int[] change = new int[] {-1, 1};
+        int pick = Random.Range(0,2);
+        if(pick == 2)
+        {
+            pick = 1;
+        }
+        _speed *= change[pick];
+
         animator = GetComponent<Animator>();
     }
 
@@ -45,7 +54,7 @@ public class FishController : MonoBehaviour
         Vector2 position = transform.position;
         position.x = position.x + _speed * Time.deltaTime;
         //Make the sin wave inconsistently go up and down. 
-        position.y = Mathf.Sin((Time.time) * _frequency) * _amplitude - _k;
+        position.y = Mathf.Sin((Time.time) * _frequency) * _amplitude + position.y;
         transform.position = position;
     }
 

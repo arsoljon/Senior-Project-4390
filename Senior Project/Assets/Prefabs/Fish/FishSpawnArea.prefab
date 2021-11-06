@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2175309555157719719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8774967354807408720}
+  - component: {fileID: 6798672737710743771}
+  m_Layer: 0
+  m_Name: SpawnArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8774967354807408720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2175309555157719719}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9, y: -10.9, z: 0}
+  m_LocalScale: {x: 1.318125, y: 2.8928463, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9200909289872805008}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &6798672737710743771
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2175309555157719719}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -34.162453, y: 13.07312}
+      - {x: -34.129772, y: -0.85357976}
+      - {x: -0.5877852, y: -0.80901706}
+      - {x: 18.742174, y: -0.809016}
+      - {x: 18.66229, y: 12.52096}
+      - {x: 18.658298, y: 13.18701}
 --- !u!1 &9200909289295325524
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +203,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9200909289872805008}
-  - component: {fileID: 9200909289872805009}
   m_Layer: 0
   m_Name: FishSpawnArea
   m_TagString: Untagged
@@ -162,40 +223,10 @@ Transform:
   m_Children:
   - {fileID: 9200909290090382421}
   - {fileID: 6400410972239511803}
+  - {fileID: 8774967354807408720}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &9200909289872805009
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9200909289872805014}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -34.162453, y: 13.07312}
-      - {x: -34.129772, y: -0.85357976}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 18.742174, y: -0.809016}
-      - {x: 18.66229, y: 12.52096}
-      - {x: 18.658298, y: 13.18701}
 --- !u!1 &9200909289921312634
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +318,7 @@ Transform:
   m_GameObject: {fileID: 9200909290090382420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.542449, y: 5.6360035, z: 19.425709}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3625, y: 2.73375, z: 1}
   m_Children:
   - {fileID: 9200909290238328232}
   - {fileID: 9200909289295325525}
@@ -422,9 +453,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6466922671833346595, guid: 695b8ecfe202cb74aa712e5b339b5b9e, type: 3}
+      propertyPath: FishCount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466922671833346595, guid: 695b8ecfe202cb74aa712e5b339b5b9e, type: 3}
       propertyPath: fishSpawnArea
       value: 
-      objectReference: {fileID: 9200909289872805009}
+      objectReference: {fileID: 6798672737710743771}
+    - target: {fileID: 6466922671833346595, guid: 695b8ecfe202cb74aa712e5b339b5b9e, type: 3}
+      propertyPath: listOfFish.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466922671833346595, guid: 695b8ecfe202cb74aa712e5b339b5b9e, type: 3}
+      propertyPath: listOfFish.Array.data[0]
+      value: 
+      objectReference: {fileID: 1121388914093692612, guid: 22a2994c58f0cb647a06fe18e4eaa018, type: 3}
+    - target: {fileID: 6466922671833346595, guid: 695b8ecfe202cb74aa712e5b339b5b9e, type: 3}
+      propertyPath: listOfFish.Array.data[1]
+      value: 
+      objectReference: {fileID: 7278083370665052465, guid: b6ce041fd0d32ef49aa3dd7560af2d6a, type: 3}
+    - target: {fileID: 6466922671833346595, guid: 695b8ecfe202cb74aa712e5b339b5b9e, type: 3}
+      propertyPath: listOfFish.Array.data[2]
+      value: 
+      objectReference: {fileID: 9131965835966228629, guid: 4b45f269d48fe5542b32c7306592caf9, type: 3}
+    - target: {fileID: 6466922671833346595, guid: 695b8ecfe202cb74aa712e5b339b5b9e, type: 3}
+      propertyPath: listOfFish.Array.data[3]
+      value: 
+      objectReference: {fileID: 2296591102402796621, guid: bc894ab831bb87d4d9823805ac7be2e6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 695b8ecfe202cb74aa712e5b339b5b9e, type: 3}
 --- !u!4 &6400410972239511803 stripped

@@ -5,24 +5,30 @@ using UnityEngine;
 public class FishManager : MonoBehaviour
 {
     [SerializeField]PolygonCollider2D fishSpawnArea; 
+    [SerializeField]GameObject[] listOfFish;
+    [SerializeField]int FishCount; 
+    int index; 
 
     // Start is called before the first frame update
     void Start()
     {
         if (fishSpawnArea == null) GetComponent<PolygonCollider2D>();
         if (fishSpawnArea == null) Debug.Log("Please assign PolygonCollider2D component.");
-        foreach(Transform child in gameObject.transform)
+        index = 0; 
+
+        for(int i = 0; i < FishCount; i++)
         {
-            if(child.tag == "Fish")
+            randomizeStartPosition(listOfFish[index]);
+            index += 1; 
+            if(index > (listOfFish.Length - 1))
             {
-                randomizeStartPosition(child);
+                index = 0;
             }
         }
- 
     }
  
 
-    public void randomizeStartPosition(Transform child)
+    public void randomizeStartPosition(GameObject child)
     {
         Vector3 rndPoint3D = RandomPointInBounds(fishSpawnArea.bounds, 1f);
         Vector2 rndPoint2D = new Vector2(rndPoint3D.x, rndPoint3D.y);
@@ -32,7 +38,7 @@ public class FishManager : MonoBehaviour
             //GameObject rndCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
             //rndCube.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             //rndCube.transform.position = rndPoint2D;
-            child.transform.position = rndPoint2D;
+            Instantiate(child, rndPoint2D , Quaternion.identity);
         }
     }
 
