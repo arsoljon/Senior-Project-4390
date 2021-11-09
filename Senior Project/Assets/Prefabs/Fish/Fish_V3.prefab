@@ -1907,6 +1907,8 @@ GameObject:
   - component: {fileID: 3343011915446137254}
   - component: {fileID: 750254857}
   - component: {fileID: 502868808}
+  - component: {fileID: -6652393253800846354}
+  - component: {fileID: -4943503160034024353}
   m_Layer: 0
   m_Name: Fish_V3
   m_TagString: Fish
@@ -2008,7 +2010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fa0d5983428d248ba69c609fc8efe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
+  _speed: -0
   _k: 0
 --- !u!50 &750254857
 Rigidbody2D:
@@ -2041,7 +2043,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2061,6 +2063,32 @@ PolygonCollider2D:
       - {x: -0.5390124, y: 1.5442964}
       - {x: 0.5024315, y: 1.5321028}
       - {x: 1.2680826, y: 2.1014376}
+--- !u!114 &-6652393253800846354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131965835966228629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d175c83d7baa2eb4ab8da84b6af591bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  isDead: 0
+--- !u!114 &-4943503160034024353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131965835966228629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ec0a0954b2b8a4393689503b0ddfae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9182413319320387392
 GameObject:
   m_ObjectHideFlags: 0

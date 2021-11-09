@@ -9,6 +9,8 @@ public class FishManager : MonoBehaviour
     [SerializeField]int FishCount; 
     int index; 
 
+    //GameObject _container = GameObject.Find("FishSpawnArea");
+
     // Start is called before the first frame update
     void Start()
     {

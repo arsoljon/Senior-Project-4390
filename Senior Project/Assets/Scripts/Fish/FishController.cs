@@ -14,26 +14,28 @@ public class FishController : MonoBehaviour
     public float _k; 
     float _amplitude;
     float _frequency;
-    Rigidbody controller;
+    bool rotated;
+    Rigidbody2D rigidbody2d;
 
     Animator animator;
     // Start is called before the first frame update
     void Start()
     {
+        //_k will adjust the y-value as neccessary. 
         _k = 0;
         _frequency = Random.Range(0.8f, 1.3f);
         _amplitude = Random.Range(0.01f, 0.05f);
         _speed = Random.Range(1.0f, 5.0f);
-        //alter the direction randomly 
-        int[] change = new int[] {-1, 1};
+        //direction will go left or right
+        int[] direction = new int[] {-1, 1};
         int pick = Random.Range(0,2);
         if(pick == 2)
-        {
             pick = 1;
-        }
-        _speed *= change[pick];
+        _speed *= direction[pick];
 
         animator = GetComponent<Animator>();
+        rotated = false;
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -44,21 +46,32 @@ public class FishController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(_speed > 0){
-            animator.SetFloat("Move X", -1);
+        //rotate fish if it is dead otherwise continue with the normal movement. 
+        Vector2 position = rigidbody2d.position;
+        if(gameObject.GetComponent<FishHealth>().isDead == true && rotated == false)
+        {
+            transform.rotation = Quaternion.Euler(0,0,180);
+            position.y += 2;
+            rotated = true; 
+        }
+        if(rotated == true)
+        {
+            position.y = position.y + (Time.deltaTime/2);
+            transform.position = position;
         }
         else{
-            animator.SetFloat("Move X", 1);
+            if(_speed > 0)
+                animator.SetFloat("Move X", -1);
+            else
+                animator.SetFloat("Move X", 1);
+            position.x = position.x + _speed * Time.deltaTime;
+            position.y = Mathf.Sin((Time.time) * _frequency) * _amplitude + position.y;
+            rigidbody2d.MovePosition(position);
         }
-        //animator.SetFloat("Move X", _speed);
-        Vector2 position = transform.position;
-        position.x = position.x + _speed * Time.deltaTime;
-        //Make the sin wave inconsistently go up and down. 
-        position.y = Mathf.Sin((Time.time) * _frequency) * _amplitude + position.y;
-        transform.position = position;
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        //check if a fish hits another fish and move them so they do not get stuck together. 
         if(other.gameObject.tag == "Fish")
         {
             _k += 1;
