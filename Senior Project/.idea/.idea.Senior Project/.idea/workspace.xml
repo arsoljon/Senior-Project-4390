@@ -16,6 +16,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Health.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127e81e1cb3441cc97d26b1910daae7713b000/55/344af7f3/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AnimationHandler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -75,6 +77,7 @@
       <workItem from="1635961346555" duration="5138000" />
       <workItem from="1636140979777" duration="39000" />
       <workItem from="1636146914020" duration="9873000" />
+      <workItem from="1636394950900" duration="1321000" />
     </task>
     <servers />
   </component>
