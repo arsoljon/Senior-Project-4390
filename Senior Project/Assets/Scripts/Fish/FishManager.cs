@@ -9,8 +9,6 @@ public class FishManager : MonoBehaviour
     [SerializeField]int FishCount; 
     int index; 
 
-    //GameObject _container = GameObject.Find("FishSpawnArea");
-
     // Start is called before the first frame update
     void Start()
     {
@@ -37,9 +35,6 @@ public class FishManager : MonoBehaviour
         Vector2 rndPointInside = fishSpawnArea.ClosestPoint(new Vector2(rndPoint2D.x, rndPoint2D.y));
         if (rndPointInside.x == rndPoint2D.x && rndPointInside.y == rndPoint2D.y)
         {
-            //GameObject rndCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            //rndCube.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            //rndCube.transform.position = rndPoint2D;
             Instantiate(child, rndPoint2D , Quaternion.identity);
         }
     }

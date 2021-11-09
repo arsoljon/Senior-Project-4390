@@ -8,7 +8,7 @@ public class FishHealth : MonoBehaviour
     public int health { get { return currentHealth; }}
     int currentHealth;
     public bool isDead;
-    public float timeInvincible = 1.0f;
+    public float timeInvincible = 0.5f;
     bool isInvincible;
     float invincibleTimer;
 
@@ -27,6 +27,7 @@ public class FishHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Invincible makes it possiple to take damage overtime rather than all at once. 
         if (isInvincible)
         {
             invincibleTimer -= Time.deltaTime;

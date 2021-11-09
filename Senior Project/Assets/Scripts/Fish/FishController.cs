@@ -21,6 +21,8 @@ public class FishController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject Parent = GameObject.Find("FishSpawnArea");
+        transform.parent = Parent.transform;
         //_k will adjust the y-value as neccessary. 
         _k = 0;
         _frequency = Random.Range(0.8f, 1.3f);
@@ -46,7 +48,7 @@ public class FishController : MonoBehaviour
 
     void FixedUpdate()
     {
-        //rotate fish if it is dead otherwise continue with the normal movement. 
+        //rotate fish if it is dead, otherwise, continue with the normal movement. 
         Vector2 position = rigidbody2d.position;
         if(gameObject.GetComponent<FishHealth>().isDead == true && rotated == false)
         {

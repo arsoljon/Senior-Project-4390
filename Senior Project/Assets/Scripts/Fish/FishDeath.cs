@@ -7,6 +7,7 @@ public class FishDeath : MonoBehaviour
     float deathTimer = 0f;
     float maxDeathTimer = 3f;
     SpriteRenderer renderer;
+    Renderer m_ObjectRenderer;
     // Start is called before the first frame update
     void Awake() 
     {
@@ -23,9 +24,13 @@ public class FishDeath : MonoBehaviour
     void Update()
     {
         if(gameObject.GetComponent<FishHealth>().health <= 0){
+            //Fetch the GameObject's Renderer component
+            m_ObjectRenderer = gameObject.GetComponent<Renderer>();
+            //Change the GameObject's Material Color to red
+            m_ObjectRenderer.material.color = Color.red;
             gameObject.layer = 20;
             gameObject.GetComponent<FishHealth>().isDead = true;
-            renderer.color = new Color(1f,0f,0f, 0.7f);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,0f,0f, 0.7f);
             //gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
             //gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
             //gameObject.GetComponent<Animator>().Play("Fish_Death");
