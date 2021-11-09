@@ -31,7 +31,7 @@ public class FishDeath : MonoBehaviour
             gameObject.layer = 20;
             gameObject.GetComponent<FishHealth>().isDead = true;
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,0f,0f, 0.7f);
-            //gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+            gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
             //gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
             //gameObject.GetComponent<Animator>().Play("Fish_Death");
             //Destroy(gameObject);
