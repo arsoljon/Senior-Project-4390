@@ -1146,6 +1146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ec0a0954b2b8a4393689503b0ddfae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 4568339090519925008, guid: 3e07159f18ff8384d82cd30568c9e286, type: 3}
+  FishManager: {fileID: 4410508174523283413, guid: 695b8ecfe202cb74aa712e5b339b5b9e, type: 3}
 --- !u!212 &2101789171
 SpriteRenderer:
   m_ObjectHideFlags: 0

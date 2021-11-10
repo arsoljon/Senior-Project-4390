@@ -7,6 +7,9 @@ public class FishManager : MonoBehaviour
     [SerializeField]PolygonCollider2D fishSpawnArea; 
     [SerializeField]GameObject[] listOfFish;
     [SerializeField]int FishCount; 
+    int partialFishCount;
+    float respawnTimer;
+    float maxRespawnTimer; 
     int index; 
 
     // Start is called before the first frame update
@@ -15,18 +18,37 @@ public class FishManager : MonoBehaviour
         if (fishSpawnArea == null) GetComponent<PolygonCollider2D>();
         if (fishSpawnArea == null) Debug.Log("Please assign PolygonCollider2D component.");
         index = 0; 
+        //a partial amount of the initial fish count will respawn after the respawn timer reaches maxReaspawnTimer.
+        respawnTimer = 0f; 
+        maxRespawnTimer = 60f;
+        partialFishCount = FishCount/4; 
 
         for(int i = 0; i < FishCount; i++)
         {
             randomizeStartPosition(listOfFish[index]);
             index += 1; 
             if(index > (listOfFish.Length - 1))
-            {
                 index = 0;
-            }
         }
     }
  
+    void Update()
+    {
+        if(respawnTimer >= maxRespawnTimer)
+        {
+            respawnTimer = 0; 
+            for(int i = 0; i < partialFishCount; i++)
+            {
+                randomizeStartPosition(listOfFish[index]);
+                index += 1; 
+                if(index > (listOfFish.Length - 1))
+                {
+                    index = 0;
+                }
+            }
+        }
+        respawnTimer += Time.deltaTime;
+    }
 
     public void randomizeStartPosition(GameObject child)
     {
@@ -47,5 +69,4 @@ public class FishManager : MonoBehaviour
             Random.Range(bounds.min.z * scale, bounds.max.z * scale)
         );
     }
-    
 }

@@ -14,10 +14,9 @@ public class FishController : MonoBehaviour
     public float _k; 
     float _amplitude;
     float _frequency;
-    bool rotated;
     Rigidbody2D rigidbody2d;
-
     Animator animator;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +35,6 @@ public class FishController : MonoBehaviour
         _speed *= direction[pick];
 
         animator = GetComponent<Animator>();
-        rotated = false;
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
@@ -48,28 +46,14 @@ public class FishController : MonoBehaviour
 
     void FixedUpdate()
     {
-        //rotate fish if it is dead, otherwise, continue with the normal movement. 
+        if(_speed > 0)
+            animator.SetFloat("Move X", -1);
+        else
+            animator.SetFloat("Move X", 1);
         Vector2 position = rigidbody2d.position;
-        if(gameObject.GetComponent<FishHealth>().isDead == true && rotated == false)
-        {
-            transform.rotation = Quaternion.Euler(0,0,180);
-            position.y += 2;
-            rotated = true; 
-        }
-        if(rotated == true)
-        {
-            position.y = position.y + (Time.deltaTime/2);
-            transform.position = position;
-        }
-        else{
-            if(_speed > 0)
-                animator.SetFloat("Move X", -1);
-            else
-                animator.SetFloat("Move X", 1);
-            position.x = position.x + _speed * Time.deltaTime;
-            position.y = Mathf.Sin((Time.time) * _frequency) * _amplitude + position.y;
-            rigidbody2d.MovePosition(position);
-        }
+        position.x = position.x + _speed * Time.deltaTime;
+        position.y = Mathf.Sin((Time.time) * _frequency) * _amplitude + position.y;
+        rigidbody2d.MovePosition(position);
     }
 
     private void OnCollisionEnter2D(Collision2D other) {

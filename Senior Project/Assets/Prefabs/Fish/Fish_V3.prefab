@@ -1910,6 +1910,7 @@ GameObject:
   - component: {fileID: -6652393253800846354}
   - component: {fileID: -4943503160034024353}
   - component: {fileID: 284377079}
+  - component: {fileID: -5923108701732852933}
   m_Layer: 0
   m_Name: Fish_V3
   m_TagString: Fish
@@ -2090,6 +2091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ec0a0954b2b8a4393689503b0ddfae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 4568339090519925008, guid: 3e07159f18ff8384d82cd30568c9e286, type: 3}
 --- !u!212 &284377079
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2141,6 +2143,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5923108701732852933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131965835966228629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9afa21ccd8a5bda4fb6d7a0623e5b850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9182413319320387392
 GameObject:
   m_ObjectHideFlags: 0
