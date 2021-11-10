@@ -22,18 +22,19 @@ public class Damage : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if(gone == false)
         {
-            PlayerController controller = other.GetComponent<PlayerController>();
-            if(controller != null)
+            if(other.gameObject.tag == "Player")
             {
-                Debug.Log("Symbolic health decrease!");
-                if(controller.health > 0 && controller.health <= controller.maxHealth)
+                Health health = other.GetComponent<Health>();
+                if(health != null)
                 {
-                    controller.ChangeHealth(-1);
-                    gone = true;
-                }     
+                    if(health.GetHealthPercent() > 0 && health.GetHealthPercent() <= health.GetMaxHealth())
+                    {
+                        health.TakeDamage(10);
+                        gone = true;
+                    } 
+                }
             }
         }
-        
     }
 
     public void ResetGone()
