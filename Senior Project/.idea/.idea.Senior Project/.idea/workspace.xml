@@ -16,6 +16,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Health.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127e81e1cb3441cc97d26b1910daae7713b000/55/344af7f3/Component.cs" root0="SKIP_HIGHLIGHTING" />
@@ -78,6 +79,8 @@
       <workItem from="1636140979777" duration="39000" />
       <workItem from="1636146914020" duration="9873000" />
       <workItem from="1636394950900" duration="1321000" />
+      <workItem from="1636932199274" duration="1000" />
+      <workItem from="1636932245329" duration="76000" />
     </task>
     <servers />
   </component>
