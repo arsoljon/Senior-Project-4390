@@ -23,17 +23,18 @@ public class HealthCollectible : MonoBehaviour
     {
         if(gone == false)
         {
-            PlayerController controller = other.GetComponent<PlayerController>();
-            if (controller != null)
+            if(other.gameObject.tag == "Player")
             {
-                Debug.Log("Symbolic health increase!");
-                if(controller.health  < controller.maxHealth)
-                { 
-                    controller.ChangeHealth(1);
-                    gone = true;
+                Health health = other.GetComponent<Health>();
+                if(health != null)
+                {
+                    if(health.GetHealthPercent() < health.GetMaxHealth())
+                    {
+                        health.Heal(10);
+                        gone = true; 
+                    }
                 }
-                
-            } 
+            }
         }
     }
 
