@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3038832361216967550, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: m_Name
-      value: Green Poison Pickup
+      value: Green Poison Pickup Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3038832361216967551, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: m_Sprite
@@ -70,11 +70,6 @@ PrefabInstance:
     - target: {fileID: 4803868623565281415, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: itemButton
       value: 
-      objectReference: {fileID: 3120182442848767221}
+      objectReference: {fileID: 7577557253194483508, guid: 715a3a4672bc4f841a785849eb120bd9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
---- !u!1 &3120182442848767221 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3038832361216967550, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
-  m_PrefabInstance: {fileID: 99365652735053707}
-  m_PrefabAsset: {fileID: 0}

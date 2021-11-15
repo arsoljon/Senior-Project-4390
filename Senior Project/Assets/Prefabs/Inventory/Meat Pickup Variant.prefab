@@ -53,16 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3038832361216967550, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: m_Name
-      value: Meat Pickup
+      value: Meat Pickup Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4803868623565281415, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: itemButton
       value: 
-      objectReference: {fileID: 7185444741853544577}
+      objectReference: {fileID: 4892366578190737454, guid: 85bbc5d66bed3cc45a9494b890c3573c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
---- !u!1 &7185444741853544577 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3038832361216967550, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
-  m_PrefabInstance: {fileID: 5304055099070186495}
-  m_PrefabAsset: {fileID: 0}

@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3038832361216967550, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: m_Name
-      value: Orange Pickup
+      value: Orange Pickup Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3038832361216967551, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: m_Sprite
@@ -70,11 +70,6 @@ PrefabInstance:
     - target: {fileID: 4803868623565281415, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: itemButton
       value: 
-      objectReference: {fileID: 1713928226293793877}
+      objectReference: {fileID: 6319195972184380844, guid: 97be82262da8dc942830cc15cfffc0de, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
---- !u!1 &1713928226293793877 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3038832361216967550, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
-  m_PrefabInstance: {fileID: 4459972425543403307}
-  m_PrefabAsset: {fileID: 0}
