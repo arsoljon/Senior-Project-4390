@@ -9,8 +9,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1873560742564077570, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
       propertyPath: m_Name
-      value: Meat Button
+      value: Meat Button Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6841734247864923606, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 7185444741853544577, guid: f49c26a083da90244a40673dffb1024e, type: 3}
     - target: {fileID: 8147059542731851864, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -95,5 +99,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9159047835033043209, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5321949957799140045, guid: 2f30905ca46cacb4c9e138d7dcb802ed, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}

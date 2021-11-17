@@ -9,8 +9,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1873560742564077570, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
       propertyPath: m_Name
-      value: Bread Button
+      value: Bread Button Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6841734247864923606, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 9074329078736980396, guid: 34242349e93eec541bc3c33de8872944, type: 3}
     - target: {fileID: 8147059542731851864, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

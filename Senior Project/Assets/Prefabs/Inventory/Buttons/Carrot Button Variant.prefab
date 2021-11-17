@@ -9,8 +9,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1873560742564077570, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
       propertyPath: m_Name
-      value: Carrot Button
+      value: Carrot Button Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6841734247864923606, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 7948760647756857412, guid: 0445a806cccfe1a4586c076aa3ec13e1, type: 3}
     - target: {fileID: 8147059542731851864, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
