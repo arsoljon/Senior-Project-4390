@@ -1,5 +1,42 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!50 &8216940472176010479
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7948760647756857412}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!58 &-8785117866295662011
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7948760647756857412}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.036377132, y: -0.04365313}
+  serializedVersion: 2
+  m_Radius: 0.1993292
 --- !u!1001 &4927978539445797690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71,5 +108,11 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 4725761592002407041, guid: 0e7ce2bcf7a8be7499721572d5fd3cbe, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3038832361216967549, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+--- !u!1 &7948760647756857412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3038832361216967550, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+  m_PrefabInstance: {fileID: 4927978539445797690}
+  m_PrefabAsset: {fileID: 0}

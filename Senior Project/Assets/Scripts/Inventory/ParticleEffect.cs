@@ -6,12 +6,10 @@ public class ParticleEffect : MonoBehaviour
 {
     public GameObject effect;
     private Transform player;
-    bool gone; 
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        gone = false; 
     }
 
     public void Use()
