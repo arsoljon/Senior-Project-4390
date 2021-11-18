@@ -19,6 +19,20 @@ public class HealthCollectible : MonoBehaviour
         
     }
 
+    public void ChangeHealth()
+    {
+        Transform player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        Health health = player.GetComponent<Health>();
+        if(health != null)
+        {
+            if(health.GetHealthPercent() < health.GetMaxHealth())
+            {
+                health.Heal(10);
+                gone = true;
+            }
+        }
+    }
+/*
     void OnTriggerEnter2D(Collider2D other)
     {
         if(gone == false)
@@ -37,7 +51,7 @@ public class HealthCollectible : MonoBehaviour
             }
         }
     }
-
+*/
     public void ResetGone()
     {
         gone = false;
