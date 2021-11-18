@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Shoreline
   - WaterBody
+  - Food
+  - Poison
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Entity
   - 
   - 
   - 
@@ -48,6 +50,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1553036371
+    locked: 0
+  - name: Creature
+    uniqueID: 4200299341
     locked: 0
   - name: Water
     uniqueID: 1878619525
