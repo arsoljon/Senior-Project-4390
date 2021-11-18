@@ -231,7 +231,6 @@ GameObject:
   - component: {fileID: 2983877996185834990}
   - component: {fileID: 2983877996185834991}
   - component: {fileID: 2983877996185834980}
-  - component: {fileID: 2983877996185834983}
   - component: {fileID: 2983877996185834982}
   - component: {fileID: 2983877996185835001}
   - component: {fileID: 2983877996185835000}
@@ -281,7 +280,7 @@ MonoBehaviour:
   - {fileID: 2983877996266241036}
   - {fileID: 2983877995950710325}
   m_Bounds:
-    m_Center: {x: 0.0116814375, y: 0.003097415, z: 0}
+    m_Center: {x: 0.0116814375, y: 0.0030972958, z: 0}
     m_Extent: {x: 1.8718159, y: 1.2956135, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -441,22 +440,6 @@ MonoBehaviour:
   whatIsWater:
     serializedVersion: 2
     m_Bits: 16
---- !u!58 &2983877996185834983
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2983877996185834988}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0116814375, y: 0.003097415}
-  serializedVersion: 2
-  m_Radius: 5
 --- !u!114 &2983877996185834982
 MonoBehaviour:
   m_ObjectHideFlags: 0
