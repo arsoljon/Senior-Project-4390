@@ -1660,6 +1660,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1627871095, guid: f0b2f6b651d0f9141a3f1e1266999049, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1797580779}
+    - target: {fileID: 1627871095, guid: f0b2f6b651d0f9141a3f1e1266999049, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627871095, guid: f0b2f6b651d0f9141a3f1e1266999049, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerHud, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627871095, guid: f0b2f6b651d0f9141a3f1e1266999049, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 410458478740260098, guid: f0b2f6b651d0f9141a3f1e1266999049, type: 3}
       propertyPath: m_Name
       value: PlayerHud
@@ -3576,6 +3592,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29fb20681f06e3544984096a499ab7c3, type: 3}
+--- !u!114 &1797580779 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1797580779, guid: f0b2f6b651d0f9141a3f1e1266999049, type: 3}
+  m_PrefabInstance: {fileID: 841034347}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9280f4d02b8b53a4bb6617c8e9b9189c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1801474292
 GameObject:
   m_ObjectHideFlags: 0

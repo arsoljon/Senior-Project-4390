@@ -17,6 +17,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerHud.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Health.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
@@ -86,6 +87,8 @@
       <workItem from="1637010420956" duration="1656000" />
       <workItem from="1637012131975" duration="844000" />
       <workItem from="1637172615643" duration="4456000" />
+      <workItem from="1637692148595" duration="710000" />
+      <workItem from="1637730189907" duration="2096000" />
     </task>
     <servers />
   </component>
