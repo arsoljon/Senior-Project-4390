@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: cf6406804050a01409183125789a643b, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_0854e6104e304de785e2c53ea2539abb_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_24141e56b3294e3a86da63883314ae5a: 400
+    - Vector1_5a4bd50ac1ef4986879d3f506c28ce6f: 0.928
+    - Vector1_715bfcc5a8184cf6a5d661c445ba2c80: 2
+    - Vector1_7a75a31cc24b4fb48da2481e3a455e94: 3
+    - Vector1_9c88706fbc4d4583b537a8048a1351b5: 6.6
+    - Vector1_a06cd05f8e2742789766132d86c53a15: 0.48
+    - Vector1_e0c9bed1213c4d7d9b1861a83d0b9cd6: 1600
+    m_Colors:
+    - Color_0c7a8cefcc9b4f55bc34a62a885787f8: {r: 0, g: 0.3921569, b: 0.8313726, a: 0}
+    - Color_12e86d8e25934e178b1524be9bb7eff0: {r: 0, g: 0.047460664, b: 0.3018868, a: 0.5764706}
+    - Vector2_73b4bb07db344bfa9d48f4054f6714f4: {r: -0.0005, g: 0.0005, b: 0, a: 0}
+    - Vector3_b9ed094041ed4a3cad72a8d262723c2e: {r: 0, g: 0.0006, b: 0, a: 0}
+    - Vector3_c56c10357ac54724ba1b0650d8d01db8: {r: -0.0005, g: 0, b: 0, a: 0}
+    - Vector3_dc83817544074496b8cf3a92cde1c872: {r: 0, g: 0.001, b: 0, a: 0}
+  m_BuildTextureStacks: []
