@@ -24,7 +24,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.58300364, y: 0.73333335}
+  m_Size: {x: 0.68, y: 0.55}
   m_EdgeRadius: 0
 --- !u!1001 &4927978539445797690
 PrefabInstance:
@@ -33,6 +33,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 215938044, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+      propertyPath: m_Radius
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 3038832361216967548, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -88,6 +92,10 @@ PrefabInstance:
     - target: {fileID: 3038832361216967550, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: m_Name
       value: Carrot Pickup Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3038832361216967550, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3038832361216967551, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: m_Sprite
