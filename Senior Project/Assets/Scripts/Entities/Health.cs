@@ -18,7 +18,6 @@ public class Health : MonoBehaviour, IDamageable
 
     public void TakeDamage(int amount)
     {
-        print("Amount taken:" + amount);
         health -= amount;
         if (health <= 0)
         {
@@ -49,7 +48,7 @@ public class Health : MonoBehaviour, IDamageable
 
     private void Died()
     {
-        print("Im dead!!");
+        Destroy(gameObject);
         OnDied?.Invoke();
     }
 
