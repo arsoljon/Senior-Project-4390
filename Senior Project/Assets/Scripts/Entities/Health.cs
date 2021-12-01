@@ -6,8 +6,7 @@ using UnityEngine;
 public class Health : MonoBehaviour, IDamageable
 {
     [SerializeField] protected int maxHealth = 100;
-
-    private int health;
+    [SerializeField] private int health;
 
     public event Action OnDied;
 
