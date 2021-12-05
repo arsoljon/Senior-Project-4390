@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carrot Button Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1873560742564077570, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 6841734247864923606, guid: 9be8dc1e4664f004c8c6ff1bb135d729, type: 3}
       propertyPath: item
       value: 
