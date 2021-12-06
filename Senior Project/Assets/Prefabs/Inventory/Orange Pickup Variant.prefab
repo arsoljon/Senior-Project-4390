@@ -37,6 +37,22 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.06
       objectReference: {fileID: 0}
+    - target: {fileID: 215938044, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 215938045, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215938045, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215938045, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3038832361216967548, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -101,8 +117,7 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 6319195972184380844, guid: 97be82262da8dc942830cc15cfffc0de, type: 3}
-    m_RemovedComponents:
-    - {fileID: 3038832361216967549, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
 --- !u!1 &1713928226293793877 stripped
 GameObject:

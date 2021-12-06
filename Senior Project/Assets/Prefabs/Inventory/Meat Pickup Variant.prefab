@@ -33,6 +33,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 215938044, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 215938045, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215938045, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 215938045, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3038832361216967548, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -91,6 +107,7 @@ PrefabInstance:
       objectReference: {fileID: 4892366578190737454, guid: 85bbc5d66bed3cc45a9494b890c3573c, type: 3}
     m_RemovedComponents:
     - {fileID: 3038832361216967549, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
+    - {fileID: 215938044, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
 --- !u!1 &7185444741853544577 stripped
 GameObject:
