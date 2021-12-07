@@ -9,7 +9,7 @@ public class Spawn : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     //funtion to drop item a near player position
     public void SpawnDroppedItem()

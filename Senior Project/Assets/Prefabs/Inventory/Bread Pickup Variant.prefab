@@ -103,5 +103,6 @@ PrefabInstance:
       propertyPath: itemButton
       value: 
       objectReference: {fileID: 2149155203684477999, guid: bfe17766da163634eb952d71566f4d79, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 215938044, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 28ab0f223648a214d855039de3e0d936, type: 3}
