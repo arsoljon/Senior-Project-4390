@@ -7,6 +7,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Creature/CreatureAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerHud.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Health.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127e81e1cb3441cc97d26b1910daae7713b000/55/344af7f3/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127e81e1cb3441cc97d26b1910daae7713b000/2a/4f1906b8/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="200DYuLEHyujw4aewcUMogFi9hZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -17,6 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -57,6 +76,23 @@
       <workItem from="1635462251560" duration="36000" />
       <workItem from="1635464168098" duration="49000" />
       <workItem from="1635471458059" duration="595000" />
+      <workItem from="1635786346471" duration="9806000" />
+      <workItem from="1635961036416" duration="252000" />
+      <workItem from="1635961346555" duration="5138000" />
+      <workItem from="1636140979777" duration="39000" />
+      <workItem from="1636146914020" duration="9873000" />
+      <workItem from="1636394950900" duration="1321000" />
+      <workItem from="1636932199274" duration="1000" />
+      <workItem from="1636932245329" duration="76000" />
+      <workItem from="1636932377195" duration="805000" />
+      <workItem from="1637004796360" duration="533000" />
+      <workItem from="1637010420956" duration="1656000" />
+      <workItem from="1637012131975" duration="844000" />
+      <workItem from="1637172615643" duration="4456000" />
+      <workItem from="1637692148595" duration="710000" />
+      <workItem from="1637730189907" duration="2435000" />
+      <workItem from="1638039101185" duration="464000" />
+      <workItem from="1638064457623" duration="5001000" />
     </task>
     <servers />
   </component>

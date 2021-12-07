@@ -19,24 +19,39 @@ public class HealthCollectible : MonoBehaviour
         
     }
 
+    public void ChangeHealth()
+    {
+        Transform player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        Health health = player.GetComponent<Health>();
+        if(health != null)
+        {
+            if(health.GetHealthPercent() < health.GetMaxHealth())
+            {
+                health.Heal(10);
+                gone = true;
+            }
+        }
+    }
+/*
     void OnTriggerEnter2D(Collider2D other)
     {
         if(gone == false)
         {
-            PlayerController controller = other.GetComponent<PlayerController>();
-            if (controller != null)
+            if(other.gameObject.tag == "Player")
             {
-                Debug.Log("Symbolic health increase!");
-                if(controller.health  < controller.maxHealth)
-                { 
-                    controller.ChangeHealth(1);
-                    gone = true;
+                Health health = other.GetComponent<Health>();
+                if(health != null)
+                {
+                    if(health.GetHealthPercent() < health.GetMaxHealth())
+                    {
+                        health.Heal(10);
+                        gone = true; 
+                    }
                 }
-                
-            } 
+            }
         }
     }
-
+*/
     public void ResetGone()
     {
         gone = false;
