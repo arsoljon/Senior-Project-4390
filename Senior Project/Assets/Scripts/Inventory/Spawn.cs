@@ -14,7 +14,9 @@ public class Spawn : MonoBehaviour
     //funtion to drop item a near player position
     public void SpawnDroppedItem()
     {
+        //player positiom
         Vector2 playerPos = new Vector2(player.position.x + 3, player.position.y);
+        //dropped item position
         Instantiate(item, playerPos, Quaternion.identity);
     }
 }
