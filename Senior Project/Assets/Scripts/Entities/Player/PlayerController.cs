@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 
     public int maxHealth = 5;
     public int health { get { return currentHealth; }}
-    int currentHealth;
+    protected int currentHealth;
     public bool isDead = false;
 
     float waterLevel = -500f;
