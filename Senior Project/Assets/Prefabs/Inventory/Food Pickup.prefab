@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4803868623565281415}
   - component: {fileID: 215938045}
   - component: {fileID: 215938044}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Food Pickup
   m_TagString: Food
   m_Icon: {fileID: 0}
