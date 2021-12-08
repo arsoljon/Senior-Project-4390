@@ -8,6 +8,7 @@ public class Health : MonoBehaviour, IDamageable
     [SerializeField] protected int maxHealth = 100;
     [SerializeField] private int health;
 
+
     public event Action OnDied;
 
     private void Awake()
@@ -21,10 +22,9 @@ public class Health : MonoBehaviour, IDamageable
         if (health <= 0)
         {
             health = 0;
-            
             Died(); //invoke died event
         }
-        //UIHealthBar.instance.SetValue(health / (float)maxHealth);
+        UIHealthBar.instance.SetValue(health / (float)maxHealth);
         // invoke damaged event
     }
 
@@ -36,7 +36,7 @@ public class Health : MonoBehaviour, IDamageable
         {
             health = maxHealth;
         }
-        //UIHealthBar.instance.SetValue(health / (float)maxHealth);
+        UIHealthBar.instance.SetValue(health / (float)maxHealth);
         // invoke recovery event
     }
 
@@ -49,6 +49,7 @@ public class Health : MonoBehaviour, IDamageable
     {
         Destroy(gameObject);
         OnDied?.Invoke();
+        LevelManager.instance.Respawn();
     }
 
     public float GetMaxHealth()

@@ -21,7 +21,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
 
     [SerializeField] private Transform submersedCheck;
-    [SerializeField] private float submersedCheckRadius = .2f;
+    [SerializeField] private float submersedCheckRadius = .5f;
     [SerializeField] private LayerMask whatIsWater;
 
     private Rigidbody2D rb2d;
