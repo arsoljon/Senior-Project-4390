@@ -11,6 +11,7 @@ TagManager:
   - SwimBoundary
   - Fish
   - Underwater
+  - InventorySlot
   layers:
   - Default
   - TransparentFX
