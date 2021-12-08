@@ -22,7 +22,6 @@ public class Health : MonoBehaviour, IDamageable
         if (health <= 0)
         {
             health = 0;
-            
             Died(); //invoke died event
         }
         UIHealthBar.instance.SetValue(health / (float)maxHealth);
@@ -48,9 +47,9 @@ public class Health : MonoBehaviour, IDamageable
 
     private void Died()
     {
-        LevelManager.instance.Respawn();
         Destroy(gameObject);
         OnDied?.Invoke();
+        LevelManager.instance.Respawn();
     }
 
     public float GetMaxHealth()

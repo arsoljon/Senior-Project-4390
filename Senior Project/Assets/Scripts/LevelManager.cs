@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
     public void Respawn () {
         GameObject player = Instantiate(playerPrefab, respawnPoint.position, Quaternion.identity);
         cam.Follow = player.transform;
-        int maxHealth = 5;
-        //player.GetComponent<PlayerController>().ChangeHealth(maxHealth);
+        int maxHealth = 100;
+        player.GetComponent<Health>().Heal(maxHealth);
     }
 }
