@@ -9,7 +9,6 @@ public class FishDeath : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("health: " + gameObject.GetComponent<FishHealth>().health);
         animator = gameObject.GetComponent<Animator>();
     }
 

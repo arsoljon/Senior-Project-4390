@@ -8,6 +8,9 @@ TagManager:
   - WaterBody
   - Food
   - Poison
+  - SwimBoundary
+  - Fish
+  - Underwater
   layers:
   - Default
   - TransparentFX
