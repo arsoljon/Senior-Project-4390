@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3456119671320691761}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spine_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4621059700794894732}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fin_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6419074093115748273}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spine_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5783878280163732830}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spine_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1142449746890598685}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fin_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2775584967042498030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tail_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 4400015007670786093}
   - component: {fileID: 5532658326026721376}
   - component: {fileID: 6210582481995623160}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7117055426553339441}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tail_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3581685155389113801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tail_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7190780620165293463}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fin_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5732282382166196368}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BottomTail Solver_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5732282382308204312}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5732282382773439565}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5732282382780435806}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TopTail Solver_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5732282382963232508}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Effector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5732282383030553025}
   - component: {fileID: 5732282383030553026}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TopTail Solver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5732282383110682889}
   - component: {fileID: 5732282383110682890}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BottomTail Solver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5732282383328636227}
   - component: {fileID: 5732282383328636236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fin Solver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5732282383618565188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fin Solver_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -769,7 +769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5103834767004821082}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spine_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -800,7 +800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8972058458784532755}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: head_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -830,7 +830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4780602765011638318}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spine_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,7 +863,7 @@ GameObject:
   - component: {fileID: 7892147079114914737}
   - component: {fileID: 8595783387706206224}
   - component: {fileID: 7811923810563409968}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -977,7 +977,8 @@ GameObject:
   - component: {fileID: 3519515659128584751}
   - component: {fileID: -3274941683198549520}
   - component: {fileID: 2101789171}
-  m_Layer: 0
+  - component: {fileID: 340893984}
+  m_Layer: 7
   m_Name: Fish_V2
   m_TagString: Fish
   m_Icon: {fileID: 0}
@@ -1074,7 +1075,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7278083370665052465}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1147,7 +1148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 4568339090519925008, guid: 3e07159f18ff8384d82cd30568c9e286, type: 3}
-  FishManager: {fileID: 4410508174523283413, guid: 695b8ecfe202cb74aa712e5b339b5b9e, type: 3}
 --- !u!212 &2101789171
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1199,6 +1199,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &340893984
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7278083370665052465}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.014388561, y: 1.1510909}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5252943, y: 0.37420464}
+  m_EdgeRadius: 0
 --- !u!1 &7469612741716525328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,7 +1236,7 @@ GameObject:
   - component: {fileID: 5884363877561059824}
   - component: {fileID: 5393681330033813483}
   - component: {fileID: 3960573667220124581}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1313,7 +1339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7397211993974208577}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tail_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1344,7 +1370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1019831592426356783}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tail_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

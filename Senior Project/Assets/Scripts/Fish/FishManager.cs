@@ -20,7 +20,7 @@ public class FishManager : MonoBehaviour
         index = 0; 
         //a partial amount of the initial fish count will respawn after the respawn timer reaches maxReaspawnTimer.
         respawnTimer = 0f; 
-        maxRespawnTimer = 60f;
+        maxRespawnTimer = 360f;
         partialFishCount = FishCount/4; 
 
         for(int i = 0; i < FishCount; i++)
