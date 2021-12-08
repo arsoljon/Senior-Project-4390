@@ -5,9 +5,9 @@ using UnityEngine;
 public class DrownCheck : MonoBehaviour
 {
     bool isUnderWater; 
-    [SerializeField]float maxTimeUnderWater = 3f;
+    [SerializeField]float maxTimeUnderWater = 15f;
     [SerializeField]int maxDamage = 10;
-    [SerializeField]float resetDamageTimer = 5f;
+    [SerializeField]float resetDamageTimer = 2f;
     float damageTimer = 1f;
     float remainingBreath; 
 

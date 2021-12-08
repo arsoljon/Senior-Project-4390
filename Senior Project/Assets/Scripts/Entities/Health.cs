@@ -8,6 +8,7 @@ public class Health : MonoBehaviour, IDamageable
     [SerializeField] protected int maxHealth = 100;
     [SerializeField] private int health;
 
+
     public event Action OnDied;
 
     private void Awake()
@@ -47,6 +48,7 @@ public class Health : MonoBehaviour, IDamageable
 
     private void Died()
     {
+        LevelManager.instance.Respawn();
         Destroy(gameObject);
         OnDied?.Invoke();
     }
