@@ -20,5 +20,12 @@ public class LevelManager : MonoBehaviour
         cam.Follow = player.transform;
         int maxHealth = 100;
         player.GetComponent<Health>().Heal(maxHealth);
+        //Re-initialize the slot values in the players inventory component
+        GameObject [] listofSlots = GameObject.FindGameObjectsWithTag("InventorySlot");
+        Inventory inventory = player.GetComponent<Inventory>();
+        for(int i = 0; i < inventory.slots.Length; ++i)
+        {
+            inventory.slots[i] = listofSlots[i];
+        }
     }
 }

@@ -35,7 +35,11 @@ public class PlayerAttack : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Health>().TakeDamage(hitDamage);
+            Debug.Log("Type of enemy : " + enemy);
+            if(enemy.gameObject.tag == "Fish")
+                enemy.GetComponent<FishHealth>().ChangeHealth(-hitDamage);
+            else
+                enemy.GetComponent<Health>().TakeDamage(hitDamage);
         }
     }
     

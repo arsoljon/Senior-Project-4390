@@ -11,6 +11,7 @@ TagManager:
   - SwimBoundary
   - Fish
   - Underwater
+  - InventorySlot
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - UI
   - Player
   - Entity
-  - 
-  - 
+  - Item
+  - Explosion
   - 
   - 
   - 
