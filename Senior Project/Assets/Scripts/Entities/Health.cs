@@ -24,7 +24,7 @@ public class Health : MonoBehaviour, IDamageable
             
             Died(); //invoke died event
         }
-        //UIHealthBar.instance.SetValue(health / (float)maxHealth);
+        UIHealthBar.instance.SetValue(health / (float)maxHealth);
         // invoke damaged event
     }
 
@@ -36,7 +36,7 @@ public class Health : MonoBehaviour, IDamageable
         {
             health = maxHealth;
         }
-        //UIHealthBar.instance.SetValue(health / (float)maxHealth);
+        UIHealthBar.instance.SetValue(health / (float)maxHealth);
         // invoke recovery event
     }
 

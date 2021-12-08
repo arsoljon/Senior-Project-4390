@@ -12,7 +12,7 @@ public class EnemyFish : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxDamage = -1; 
+        maxDamage = 10; 
         playerHitTimer = 0f;
         maxHitTimer = 0.5f;
         playerHit = false;
@@ -22,12 +22,12 @@ public class EnemyFish : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Player")
         {
-            PlayerController player = other.gameObject.GetComponent<PlayerController>();
-            if(player != null)
+            Health playerHealth = other.gameObject.GetComponent<Health>();
+            if(playerHealth != null)
             {
                 if(playerHit == false)
                 {
-                    player.ChangeHealth(maxDamage);
+                    playerHealth.TakeDamage(maxDamage);
                     playerHit = true;
                 }
                 else
